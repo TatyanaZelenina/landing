@@ -602,7 +602,7 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     width: 100%;
-    max-width: 750px;
+    max-width: 700px;
     margin-right: 106px;
     padding-left: 0;
     padding-right: 0;
@@ -784,14 +784,21 @@
 
     .feedback {
         margin: 0;
-        margin-bottom: 30px;
+        margin-bottom: 0;
         padding: 0 1vw;
         grid-column: 1 / 6;
         grid-row: 1 / 2;
     }
 
+    .feedback_name,
+    .feedback_mail {
+        width: 45%;
+        max-width: 100%;   
+    }
+
     .feedback_body {
-        margin-right: 0;
+        margin-right: 10px;
+
     }
 
     .feedback_contacts {
@@ -806,8 +813,12 @@
         flex: 0 1 auto;
     }
 
+    .feedback_right-box {
+    flex: 0 1 auto;
+    }
+
     .contacts {
-        width: 100%;
+        width: 45%;
         max-width: 100%;
         grid-column: 1 / 6;
         grid-row: 2 / 3;
@@ -820,9 +831,27 @@
 
 @media screen and (max-width: 908px) {
 
+.header {
+    justify-content: center;
+}
+
+    .team_members {
+        grid-template-columns: 100%;
+        grid-template-columns: auto;
+    }
+
+.intro_heading {
+    font-size: 4vw;
+}
+
+.services_heading {
+    font-size: 40px;
+}
+
     .services_lead,
     .services_blocks {
-        width: 100%;
+        flex: none;
+        width: 90%;
         max-width: 100%;
     }
 
@@ -831,34 +860,67 @@
         height: auto;
     }
 
-    .feedback {
-        padding-left: 22px;
+    .products_link {
+        font-size: 18px;
     }
+
+    .products_filter {
+        width: 98%;
+    } 
+
+    .feedback {
+        padding-left: 26px;
+    }
+
+    .feedback_heading {
+        padding-left: 17px;
+    }
+
+    .team_text {
+        max-width: 90%;
+    }
+
+    .team_selected-about {
+        max-width: 90%;
+    }
+
+    .feedback {
+        padding-left: 18px;
+    }
+
+    .feedback_text {
+    padding: 12px;
+}
+
+.subscribe_form {
+    justify-content: left;
+}
 
     .subscribe_heading {
         line-height: 50px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .products_item {
-        width: 100%;
-        text-align: center;
-    }
-
-    .feedback {
-        padding-left: 32px;
-    }
-
-    .service {
-        justify-content: center;
+        letter-spacing: 2px;
     }
 }
 
 @media screen and (max-width: 855px) {
-    .team_members {
-        grid-template-columns: 100%;
-        grid-template-columns: auto;
+
+    .intro_image {
+        width: 90%;
+    }
+
+    .products_item {
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    .products_filter {
+        width: 96%;
+    }
+
+    .product {
+        max-width: 45%;
+        width: 100%;
+        margin-right: 10px;
     }
 
     .team_selected-photo {
@@ -873,7 +935,7 @@
     }
 
     .feedback {
-        padding-left: 85px;
+        padding-left: 22px;
     }
 
     .members {
@@ -883,6 +945,23 @@
 }
 
 @media screen and (max-width: 800px) {
+    .intro_link {
+        width: 100%;
+    }
+
+    .services_heading {
+        font-size: 38px;
+    }
+
+.service_text {
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.products {
+    justify-content: space-between;
+}
+
     .services_lead {
         width: 100%;
         max-width: 100%;
@@ -893,14 +972,47 @@
         max-width: 100%;
     }
 
+    .feedback_name,
+    .feedback_mail,
+    .feedback_message {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .feedback_name {
+        margin-right: 0;
+    }
+
     .feedback {
-        padding-left: 140px;
+        padding-left: 17px;
     }
 
     .contacts {
         padding: 1vw;
+        max-width: 100%;
+        width: 45%;
     }
 }
+
+/*@media screen and (max-width: 855px) {
+    .products_item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .feedback {
+        padding-left: 32px;
+    }
+
+    .service {
+        justify-content: center;
+    }
+}
+/
+
+
+
+/*
 
 @media screen and (max-width: 760px) {
 
@@ -949,6 +1061,17 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+
+
+}
+
+@media screen and (max-width: 350px) {
+
+
+}
+/
+
 /*Popup-menu*/
 
 .popup-menu_buton {
@@ -965,7 +1088,7 @@
 
 /*Скрыть ненужные элементы*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .popup-menu_buton {
         display: block;
     }
@@ -1007,7 +1130,7 @@
     transition: visibility, transform 1s, 0.5s ease-in-out;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
     .popup-menu_list {
         visibility: hidden;
     }
